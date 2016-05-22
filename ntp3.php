@@ -10,7 +10,7 @@ $sel_nationally = mysql_fetch_array(mysql_query("SELECT * FROM `nt` WHERE `schoo
 <html>
 <head>
 <meta charset="UTF-8">
-<title>ระบบรายงาน...</title>
+<title>ระบบรายงานผลการทดสอบทางการศึกษา</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
 <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
@@ -30,18 +30,26 @@ include("css/style.css");
   	  		<div class="span12">
   	  			<?php include("include/navbar.php");?>
   	 		</div>
+  	 		<div class="span12" align="center">
+  	  				ผลการประเมินคุณภาพการศึกษาขั้นพื้นฐานเพื่อการประกันคุณภาพผู้เรียน (nt) <br>
+  	  				ชั้นประถมศึกษาปีที่ 3 ปีการศึกษา 2558 <br>
+  	  				สำนักงานเขตพื้นที่การศึกษาประถมศึกษาพะเยา เขต 1 <br>
+  	  		</div>
+  	  		<div class="span12" align="right">
+  	  				<input class="btn btn-primary" type="button" name="Button" value="Export Data" onClick="window.location.href='exportntp3.php'"><br>
+  	  		</div>
   	  		<div class="span12">
   	  			<table class="table table-bordered" >
   	  				<tr>
-  	  				<th>รหัสโรงเรียน</th>
-  	  				<th>ชื่อโรงเรียน</th>
-  	  				<th>น.ร.(คน)</th>
-  	  				<th>ด้านภาษา</th>
-  	  				<th>ด้านคำนวณ</th>
-  	  				<th>ด้านเหตุผล</th>
-  	  				<th>รวมเฉลี่ย</th>
-  	  				<th>เทียบกับระดับเขต</th>
-  	  				<th>เทียบกับระดับประเทศ</th>
+  	  				<th><div align="center">รหัสโรงเรียน</div></th>
+  	  				<th><div align="center">ชื่อโรงเรียน</div></th>
+  	  				<th><div align="center">น.ร.(คน)</div></div></th>
+  	  				<th><div align="center">ด้านภาษา</div></th>
+  	  				<th><div align="center">ด้านคำนวณ</div></th>
+  	  				<th><div align="center">ด้านเหตุผล</div></th>
+  	  				<th><div align="center">รวมเฉลี่ย</div></th>
+  	  				<th><div align="center">เทียบกับระดับเขต</div></th>
+  	  				<th><div align="center">เทียบกับระดับประเทศ</div></th>
   	  				</tr>
   	  				<?php
   	  					while($ntResult = mysql_fetch_array($sel_nt))
