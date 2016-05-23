@@ -31,12 +31,21 @@ include("css/style.css");
   	  			<?php include("include/navbar.php");?>
   	 		</div>
   	 		<div class="span12" align="center">
+<<<<<<< HEAD
   	  				ผลการประเมินคุณภาพการศึกษาขั้นพื้นฐานเพื่อการประกันคุณภาพผู้เรียน (nt57) <br>
   	  				ชั้นประถมศึกษาปีที่ 3 ปีการศึกษา 2557 <br>
   	  				สำนักงานเขตพื้นที่การศึกษาประถมศึกษาพะเยา เขต 1 <br>
   	  		</div>
   	  		<div class="span12" align="right">
   	  				<input class="btn btn-primary" type="button" name="Button" value="Export Data" onClick="window.location.href='exportnt57p3.php'"><br>
+=======
+  	  				ผลการประเมินคุณภาพการศึกษาขั้นพื้นฐานเพื่อการประกันคุณภาพผู้เรียน (nt) <br>
+  	  				ชั้นประถมศึกษาปีที่ 3 ปีการศึกษา 2558 <br>
+  	  				สำนักงานเขตพื้นที่การศึกษาประถมศึกษาพะเยา เขต 1 <br>
+  	  		</div>
+  	  		<div class="span12" align="right">
+  	  				<input class="btn btn-primary" type="button" name="Button" value="Export Data" onClick="window.location.href='exportntp3.php'"><br>
+>>>>>>> a99f0b404411baa434047b751c4a3946fb9f8d59
   	  		</div>
   	  		<div class="span12">
   	  			<table class="table table-bordered" >
