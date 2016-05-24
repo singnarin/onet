@@ -17,20 +17,26 @@ $schoolResult =  mysql_fetch_array(mysql_query("SELECT * FROM tbschool WHERE sch
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">NT ป.3<b class="caret"></b></a>
             <ul class="dropdown-menu">
               	<li ><a href='ntp3.php?year=57'>ปี 2557</a></li>
-      	 		<li ><a href='ntp3.php?year=58'>ปี2558</a></li>
-      	 		<li ><a href='checkchildhood.php'>สรุปภาพรวม</a></li>
+      	 		<li ><a href='ntp3.php?year=58'>ปี 2558</a></li>
+      	 		<li ><a href='#'>สรุปภาพรวม</a></li>
             </ul>
           </li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">O-NET ป.6<b class="caret"></b></a>
             <ul class="dropdown-menu">
               	<li ><a href='onetp6.php?year=57'>ปี 2557</a></li>
-      	 		<li ><a href='onetp6.php?year=58'>ปี2558</a></li>
-      	 		<li ><a href='checkchildhood.php'>สรุปภาพรวม</a></li>
+      	 		<li ><a href='onetp6.php?year=58'>ปี 2558</a></li>
+      	 		<li ><a href='#'>สรุปภาพรวม</a></li>
             </ul>
           </li>
-          <li class=""><a href="onetm3.php">O-NET ม.3</a></li>
-          <li class=""><a href="logout.php">ออกจากระบบ</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">O-NET ม.3<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              	<li ><a href='onetm3.php?year=57'>ปี 2557</a></li>
+      	 		<li ><a href='onetm3.php?year=58'>ปี 2558</a></li>
+      	 		<li ><a href='#'>สรุปภาพรวม</a></li>
+            </ul>
+          </li>
         </ul>
         <ul class="nav pull-right">
         	<ul class="nav">

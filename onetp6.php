@@ -6,7 +6,7 @@ session_start();
 $year = $_GET["year"];
 $onetp6 = "onetp6".$year;
 
-$sel_onetp6 = mysql_query("SELECT * FROM `".$onetp6."` GROUP BY  `nationallylevel` DESC");
+$sel_onetp6 = mysql_query("SELECT * FROM `".$onetp6."` ORDER BY `nationallylevel` DESC");
 
 $sel_nationally = mysql_query("SELECT * FROM `".$onetp6."` WHERE `schoolid` = '00000000'");
 $countnationally = mysql_num_rows($sel_nationally);
@@ -103,6 +103,12 @@ if ($countcounty>0 AND $countnationally>0) {
         }else{
           ?>
           <div class="span12" align="center">
+  	  				ผลการทดสอบทางการศึกษาระดับชาติขั้นพื้นฐาน (O-NET) <br>
+  	  				ชั้นประถมศึกษาปีที่ 6 ปีการศึกษา 25<?php echo $year;?> <br>
+  	  				สำนักงานเขตพื้นที่การศึกษาประถมศึกษาพะเยา เขต 1 <br>
+  	  	  </div>
+          <form id="form1" name="form1" method="post" action="onetp6add.php?year=<?php echo $year;?>">
+          <div class="span12" align="center">
               <table class="table table-bordered" >
                 <tr>
                   <th><div align="center">ระดับ</div></th>
@@ -114,19 +120,30 @@ if ($countcounty>0 AND $countnationally>0) {
                   <th><div align="center">เฉลี่ย</div></th>
               </tr>
               <tr>
-                <td><?php echo $onetp6Result['schoolid'];?></td>
-                <td><?php echo $onetp6Result['thai'];?></td>
-                <td><?php echo $onetp6Result['social'];?></td>
-                <td><?php echo $onetp6Result['english'];?></td>
-                <td><?php echo $onetp6Result['math'];?></td>
-                <td><?php echo $onetp6Result['science'];?></td>
-                <td><?php echo $onetp6Result['average'];?></td>
+                <td>เขตพื้นที่การศึกษา</td>
+                <input type="hidden" name="schoolid[]" value="56010000">
+                <td><input type="text" name="thai[]" class="input-mini"></td>
+                <td><input type="text" name="social[]" class="input-mini"></td>
+                <td><input type="text" name="english[]" class="input-mini"></td>
+                <td><input type="text" name="math[]" class="input-mini"></td>
+                <td><input type="text" name="science[]" class="input-mini"></td>
+                <td><input type="text" name="average[]" class="input-mini"></td>
               </tr>
-          <?php
-            }
-              ?>
+              <tr>
+                <td>ประเทศ</td>
+                <input type="hidden" name="schoolid[]" value="00000000">
+                <td><input type="text" name="thai[]" class="input-mini"></td>
+                <td><input type="text" name="social[]" class="input-mini"></td>
+                <td><input type="text" name="english[]" class="input-mini"></td>
+                <td><input type="text" name="math[]" class="input-mini"></td>
+                <td><input type="text" name="science[]" class="input-mini"></td>
+                <td><input type="text" name="average[]" class="input-mini"></td>
+              </tr>
             </table>
+            <input type="hidden" name="row" value="2">
+            <div align="center"><input class="btn btn-primary" type="submit" value=" บันทึกข้อมูล " />
           </div>
+          </form>
           <?php 
         }
           ?>

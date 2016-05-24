@@ -5,23 +5,8 @@ session_start();
 $year = $_GET["year"];
 $onetp6 = "onetp6".$year;
 
-$selcounty = mysql_query("SELECT * FROM `".$onetp6."` WHERE `schoolid` = '56010000'");
-$countycount = mysql_num_rows($selcounty);
-if ($countycount ==1) {
-	$sel_county = mysql_fetch_array($selcounty);
-}else{
-	mysql_query("INSERT INTO `".$onetp6."` (`schoolid`) VALUES ('56010000')");
-	$sel_county = mysql_fetch_array($selcounty);
-}
-
-$selnationally = mysql_query("SELECT * FROM `".$onetp6."` WHERE `schoolid` = '00000000'");
-$nationallycount = mysql_num_rows($selnationally);
-if ($nationallycount ==1) {
-	$sel_nationally = mysql_fetch_array($selnationally);
-}else{
-	mysql_query("INSERT INTO `".$onetp6."` (`schoolid`) VALUES ('00000000')");
-	$sel_nationally = mysql_fetch_array($selnationally);
-}
+$sel_county = mysql_fetch_array(mysql_query("SELECT * FROM `".$onetp6."` WHERE `schoolid` = '56010000'"));
+$sel_nationally = mysql_fetch_array(mysql_query("SELECT * FROM `".$onetp6."` WHERE `schoolid` = '00000000'"));
 
 if ($_SESSION['ses_username']!=""){	
 
@@ -31,7 +16,8 @@ if ($_FILES["fileCSV"]["error"]>0){
 	echo "<meta http-equiv='refresh' content='0;URL=index.php'>";
 }else{
 
-move_uploaded_file($_FILES["fileCSV"]["tmp_name"],'/var/www/onet59/Upload\\'.$_FILES["fileCSV"]["name"]);
+move_uploaded_file($_FILES["fileCSV"]["tmp_name"],'D:\xampp\htdocs\onet59\Upload\\'.$_FILES["fileCSV"]["name"]);
+//move_uploaded_file($_FILES["fileCSV"]["tmp_name"],'/var/www/onet59/Upload\\'.$_FILES["fileCSV"]["name"]);
 
 $objCSV = fopen('Upload\\'.$_FILES["fileCSV"]["name"], "r");
 while (($objArr = fgetcsv($objCSV, 3000, ",")) !== FALSE) {
