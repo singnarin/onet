@@ -16,8 +16,8 @@ if ($_FILES["fileCSV"]["error"]>0){
 	echo "<meta http-equiv='refresh' content='0;URL=index.php'>";
 }else{
 
-//move_uploaded_file($_FILES["fileCSV"]["tmp_name"],'/var/www/onet59/Upload\\'.$_FILES["fileCSV"]["name"]);
-move_uploaded_file($_FILES["fileCSV"]["tmp_name"],'D:\xampp\htdocs\onet59\Upload\\'.$_FILES["fileCSV"]["name"]);
+move_uploaded_file($_FILES["fileCSV"]["tmp_name"],'/var/www/onet59/Upload\\'.$_FILES["fileCSV"]["name"]);
+//move_uploaded_file($_FILES["fileCSV"]["tmp_name"],'D:\xampp\htdocs\onet59\Upload\\'.$_FILES["fileCSV"]["name"]);
 
 $objCSV = fopen('Upload\\'.$_FILES["fileCSV"]["name"], "r");
 while (($objArr = fgetcsv($objCSV, 3000, ",")) !== FALSE) {

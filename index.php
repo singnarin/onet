@@ -28,6 +28,7 @@ include("css/style.css");
   	  			<br>
 				<br>
   	 		</div>
+<!--
   	  		<div class="span1"></div>
   	  		<div class="span3">
   	  				นำเข้าข้อมูล NT ป.3
@@ -75,6 +76,16 @@ include("css/style.css");
 				<br>
   	  			</div>
   	  		</div>
+-->
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
   	 </div>
   </div>
 </div>
