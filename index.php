@@ -25,9 +25,10 @@ include("css/style.css");
 	<div class="row">
   	  		<div class="span12">
   	  			<?php include("include/navbar.php");?>
-  	  			<br>
-				<br>
   	 		</div>
+  	 		<div class="span12" align="center"><img src="images/onet_nt.jpg"><br>
+  	  		<br></div>
+  	 		
 <!--
   	  		<div class="span1"></div>
   	  		<div class="span3">
